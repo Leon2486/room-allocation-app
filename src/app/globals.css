@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .number-input-block {
+    @apply w-12 h-12 rounded-lg border border-blue-400 text-blue-400 text-center disabled:border-gray-400 disabled:text-gray-400;
+  }
+}
